@@ -1,0 +1,14 @@
+{
+  "company": {
+    "name": "Teste Inc.",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NBC_logo.svg/2000px-NBC_logo.svg.png"
+  },
+  "sector": [
+    {
+      "label": "Teste",
+      "value": "TST",
+      "counter": 0
+    }
+  ],
+  "call": []
+}
