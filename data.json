@@ -8,6 +8,11 @@
       "label": "Teste",
       "value": "TST",
       "counter": 0
+    },
+    {
+      "label": "Desenvolvimento",
+      "value": "DEV",
+      "counter": 0
     }
   ],
   "call": []

@@ -37,7 +37,9 @@ function zeroCounter () {
    });
    client.on('next', function (next) {
 	  let nextClient 
-	 if(data.call.length == 0){
+	  let last = data.call.filter(el => el.code === next).pop()
+	  console.log(last)
+	 if(typeof last == 'undefined'){
 		 nextClient = {
 			code: next,
 			counter: 0
@@ -46,7 +48,7 @@ function zeroCounter () {
 	 else {
 		  nextClient = {
 			 code: next,
-			 counter: data.call[data.call.length - 1].counter + 1
+			 counter: last.counter + 1
 		}
 	 }
      
