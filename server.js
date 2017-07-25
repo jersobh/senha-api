@@ -36,11 +36,23 @@ function zeroCounter () {
      client.broadcast.emit('newSector', update);
    });
    client.on('next', function (next) {
-     let nextClient = {
-       code: next,
-       counter: 0
-     }
+	  let nextClient 
+	 if(data.call.length == 0){
+		 nextClient = {
+			code: next,
+			counter: 0
+		}
+	 }
+	 else {
+		  nextClient = {
+			 code: next,
+			 counter: data.call[data.call.length - 1].counter + 1
+		}
+	 }
+     
      data.call.push(nextClient)
+     	 console.log(data.call)
+
      client.broadcast.emit('callNext', data);
    });
    client.on('save', function (data) {
